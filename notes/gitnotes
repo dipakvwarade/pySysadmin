@@ -1,0 +1,141 @@
+GIT notes
+
+GIT Tutorials
+
+
+
+Initialize git repo
+
+#git init
+
+
+
+This will create a empty  git repo called in current directory /.git/
+
+
+
+Check git status
+
+# git status
+
+
+
+Git will show untrack files and directories.
+
+
+
+We can add files / dir to repo in staging area 
+
+#git add file_name.txt
+
+
+
+Check status 
+
+#git status
+
+
+
+Now commit changes with comment
+
+#git commit -m "Added file_name.txt to repository"
+
+
+
+We can use some wild characters like *
+
+#git add '*.txt'    (to add all .txt files to git from current dir)
+
+
+
+Check what has been changed 
+
+#git log
+
+
+
+Push our local repo to github/gitx 
+
+#git remote add origin https://github.com/xyz
+
+
+
+First pull and then push 
+
+git reset --mixed origin/master
+
+origin is our remote git and master is our default local branch
+
+now push our local repo(master branch) to origin
+
+#git push -u origin master  (-u is to tell git to remember the remote git name so next time we can simply say git push)
+
+
+
+Pull master branch from origin 
+
+#git pull origin master
+
+
+
+Look for changes made by others.
+
+#git diff HEAD  (HEAD is the pointer to our latest commit)
+
+
+
+You may want to change differences in staging area too with 
+
+#git diff --staged
+
+
+
+We can unstage changes by using reset 
+
+#git reset file_name.txt
+
+
+
+Remove something from repo (check out something) : git checkout -- (target) (undo)
+
+#git checkout -- file_name.txt
+
+
+
+Define our own branch to work temp 
+
+#git branch clean_up
+
+
+
+Switch to branches master and clean_up with checkout 
+
+#git checkout clean_up
+
+
+
+Remove files/dir from clean_up branch
+
+#git rm '*.txt'
+
+or 
+
+#git rm -r directory
+
+
+
+Commit changes
+
+#git commit - m "removed all 8.txt files "
+
+
+
+Merge two branches (clean_up with master)
+
+#git merge clean_up
+
+
+
+How to delete a branch ?
+
+#git branch -d clean_up
